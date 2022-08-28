@@ -1,0 +1,23 @@
+.contanier
+{
+    display:flex;
+    justify-content: center; 
+    margin: 20px; 
+    flex-wrap: wrap;
+    flex: 33.333333%.
+}
+.body
+{
+background-color: blue;
+
+}
+
+.header{
+    text-align: center;
+    color: red;
+}
+.footer
+{
+    text-align: center;
+    color: greenyellow;
+}
