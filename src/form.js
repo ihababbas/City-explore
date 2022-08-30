@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Weather from './weather'
 class Formloc extends React.Component{
     constructor(props) {
         super(props) 
@@ -14,7 +15,9 @@ class Formloc extends React.Component{
             lat: '',
             lon: '',
             mapImgPath: '',
-            errorCode: ''
+            errorCode: '',
+            weatherPath: '',
+            weather: []
         }
     }
     handleChange = (e) => {
@@ -33,11 +36,19 @@ class Formloc extends React.Component{
         this.setState({lat: cityInfo.lat})
         this.setState({lon: cityInfo.lon})
         this.setState({mapImgPath: `https://maps.locationiq.com/v3/staticmap?key=${key}&center=${cityInfo.lat},${cityInfo.lon}&zoom=12`})
+      //  this.setState({weatherPath:`http://localhost:3001/weather?lat=${this.state.lat}&lon=${this.state.lon}&q=${this.state.displayName}`})
+        console.log(this.state.lat,this.state.lon,this.state.displayName)
+       const weatherData = await axios.get(`http://localhost:3001/weather?lat=${this.state.lat}&lon=${this.state.lon}&q=${this.state.city}`)
+        console.log(weatherData.data,"test")
+        
+        this.setState({weather: weatherData.data})
+       
         }
         catch(err) {
             console.log('err.message');
             this.setState({errorCode: err.message})
           }
+         
         }
 render(){
 return (
@@ -46,7 +57,7 @@ return (
       <input name="city" placeholder="Type in a city name" onChange={this.handleChange} />
       <Button variant="primary" type="submit">Explore!</Button>
     </Form>
-   
+  
     {this.state.errorCode.length>0?
     <Container>
         <p>{this.state.errorCode}</p>
@@ -59,7 +70,9 @@ return (
       lat={this.state.lat}
       lon={this.state.lon} />
     </>
+    
     }
+      <div> <Weather weatherData={this.state.weather} /></div>
   </>
 )
 }
