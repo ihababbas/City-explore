@@ -38,7 +38,7 @@ class Formloc extends React.Component{
         this.setState({mapImgPath: `https://maps.locationiq.com/v3/staticmap?key=${key}&center=${cityInfo.lat},${cityInfo.lon}&zoom=12`})
       //  this.setState({weatherPath:`http://localhost:3001/weather?lat=${this.state.lat}&lon=${this.state.lon}&q=${this.state.displayName}`})
         console.log(this.state.lat,this.state.lon,this.state.displayName)
-       const weatherData = await axios.get(`http://localhost:3001/weather?lat=${this.state.lat}&lon=${this.state.lon}&q=${this.state.city}`)
+       const weatherData = await axios.get(`https://tusday.herokuapp.com/weather?lat=${this.state.lat}&lon=${this.state.lon}&q=${this.state.city}`)
         console.log(weatherData.data,"test")
         
         this.setState({weather: weatherData.data})
