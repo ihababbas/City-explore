@@ -35,8 +35,8 @@ class Formloc extends React.Component{
       
         const cityInfo = location.data[0];
         let displayName = cityInfo.display_name;
-        const weatherData = await axios.get(`https://wensddday.herokuapp.com/weather?lon=${cityInfo.lon}&lat=${cityInfo.lat}`)
-      const movieData = await axios.get(`https://wensddday.herokuapp.com/movie?city=${this.state.city}`)
+        const weatherData = await axios.get(`https://tusday.herokuapp.com/weather?lon=${cityInfo.lon}&lat=${cityInfo.lat}`)
+      const movieData = await axios.get(`https://tusday.herokuapp.com/movie?city=${this.state.city}`)
        
         this.setState({displayName});
         this.setState({lat: cityInfo.lat})
