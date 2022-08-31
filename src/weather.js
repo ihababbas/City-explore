@@ -7,14 +7,17 @@ class Weather extends React.Component {
     render() {
         console.log(this.props.weatherData,"dataview")
     return(
-      
-        this.props.weatherData.map((day,index) => (
+         <>
+        {this.props.weatherData.map((index) => { return (
         <div key = {index}>
 
-        <Card.Title>{day.date}</Card.Title>
-        <Card.Text>{day.description}</Card.Text>
+        <Card.Title>{index.date}</Card.Title>
+        <Card.Text>{index.description}</Card.Text>
         </div>
-        ))
+        )
+        }
+        )}
+        </>
     )
   }
 }
