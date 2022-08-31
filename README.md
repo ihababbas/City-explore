@@ -29,7 +29,7 @@ build a website the take a city name as input then git from API the other inform
 1. brain storm with Yazan Alfarra
 2. check the demo code 
 
-
+# lab 06
 # Name of feature: ihab abbas
 
 # Estimate of time needed to complete: an hour and a half
@@ -40,6 +40,31 @@ build a website the take a city name as input then git from API the other inform
 
 # Actual time needed to complete: an hour
 
+# lab 07
+
+# Name of feature: ihab abbas
+
+# Estimate of time needed to complete: 5 hours
+
+# Start time: (19:00 29-8-22) (14:30 30-8-22)
+
+# Finish time:  (21:00 29-8-22) (17:30 30-22)
+
+# Actual time needed to complete: 2 hours
+
+# lab 08
+
+# Name of feature: ihab abbas
+
+# Estimate of time needed to complete: 3 hours
+
+# Start time: (10:30 30-8-22) (5:30 31-8-22)
+
+# Finish time:  (11:59 30-8-22) (7:00 31-8-22)
+
+# Actual time needed to complete: 2 hours
 
 
 ![alt text](Blankdocument.png)
+![alt text](Blankdocument1.png)
+![alt text](lab08.png)
