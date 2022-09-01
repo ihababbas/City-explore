@@ -6,8 +6,7 @@ class Movie extends React.Component {
   render() {
     return(
         this.props.movieData.map( (x) => (
-           <div class= "contanier">
-          <Emovie   
+          <Emovie  
             title = {x.title}
            img = {`${x.imgPath}`}
            overview = {x.overview}
@@ -16,7 +15,7 @@ class Movie extends React.Component {
            popularity= {x.popularity}
            release = {x.release}
                 />
-                </div>
+            
         ))
     )
   }

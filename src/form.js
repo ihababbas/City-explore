@@ -77,7 +77,10 @@ return (
     </>
     
     }
-      <div> <Weather weatherData={this.state.weather} />
+      <div class="contanier"> 
+      <Weather weatherData={this.state.weather} />
+      </div>      
+            <div class="contanier">
              <Movie  movieData={this.state.movie} />
       
       </div>
