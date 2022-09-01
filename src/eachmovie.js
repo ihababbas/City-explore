@@ -6,14 +6,15 @@ class eachMovie extends React.Component {
         return(
          
 <Card  className="card" style={{ width: "18rem"  }}>
-          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Title>{`Title: ${this.props.title}`}</Card.Title>
           <Card.Img src={this.props.img} />
-          <Card.Text>{this.props.overview}</Card.Text>
-          <Card.Text>{this.props.avgVote}</Card.Text>
-          <Card.Text>{this.props.sumVote}</Card.Text>
-          <Card.Text>{this.props.popularity}</Card.Text>
-          <Card.Text>{this.props.release}</Card.Text>
-        </Card>           
+          <Card.Text>{`Overview: ${this.props.overview}`}</Card.Text>
+          <Card.Text>{`avgVote: ${this.props.avgVote}`}</Card.Text>
+          <Card.Text>{`sumVote: ${this.props.sumVote}`}</Card.Text>
+          <Card.Text>{`popularity: ${this.props.popularity}`}</Card.Text>
+          <Card.Text>{`release: ${this.props.release}`}</Card.Text>
+        </Card>         
+       
           )
         }
       }

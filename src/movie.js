@@ -4,15 +4,10 @@ import Emovie from './eachmovie'
 
 class Movie extends React.Component {
   render() {
-    
-    
-
-        
-    
-
     return(
         this.props.movieData.map( (x) => (
-            <Emovie  
+           <div class= "contanier">
+          <Emovie   
             title = {x.title}
            img = {`${x.imgPath}`}
            overview = {x.overview}
@@ -21,6 +16,7 @@ class Movie extends React.Component {
            popularity= {x.popularity}
            release = {x.release}
                 />
+                </div>
         ))
     )
   }

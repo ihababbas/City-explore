@@ -10,8 +10,8 @@ class weatherday extends React.Component {
      
         <div key = {this.props.key}>
 
-        <Card.Title>{this.props.date}</Card.Title>
-        <Card.Text>{this.props.des}</Card.Text>
+        <Card.Title>{`Date: ${this.props.date}`}</Card.Title>
+        <Card.Text>{`Descreption:${this.props.des}`}</Card.Text>
         </div>
         )
     
